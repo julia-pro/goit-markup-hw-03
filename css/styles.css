@@ -5,6 +5,7 @@
   --second-title-color: #ffffff;
   --bg-color: #2f303a;
   --text-about: #757575;
+  --card-set-gap: 30px;
 }
 
 h1,
@@ -33,13 +34,24 @@ img {
 .list {
   list-style: none;
 }
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 /*========HEDER======== */
+.header-page {
+  border-bottom: 1px solid #ececec;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
 .container {
-  width: 1200;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0 auto;
 }
+
 .header-container {
   display: flex;
   align-items: center;
@@ -51,10 +63,16 @@ img {
 .menu-nav {
   display: flex;
   align-items: center;
+  padding: 0;
+  margin: 0;
 }
+.menu-nav .menu-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .contact-info {
   display: flex;
-  align-items: center;
+  margin-left: auto;
 }
 .logo {
   margin-right: 93px;
@@ -74,8 +92,8 @@ img {
 .logo-span-2 {
   color: var(--main-color);
 }
-.menu-link:not(:last-child) {
-  margin-right: 50px;
+
+.menu-link {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -93,6 +111,8 @@ img {
 }
 
 .mail-link {
+  margin-left: auto;
+  margin-right: 50px;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -107,7 +127,6 @@ img {
 }
 
 .tel-link {
-  margin-left: auto;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -124,30 +143,67 @@ img {
 /*===========HERO========== */
 .hero-background {
   background: var(--bg-color);
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
+
 .main-title {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
   color: var(--second-title-color);
+  text-transform: uppercase;
+  font-size: 44px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1.36;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 .modal-btn {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 16px;
+  line-height: 1.63;
   letter-spacing: 0.03em;
   cursor: pointer;
-  color: var(--title-color);
+  color: var(--second-title-color);
+  background-color: var(--second-text-color);
+  border-radius: 4px;
+  border: 0px;
+  font-weight: 500;
+  padding: 6px 32px;
+  border-width: 1px;
+}
+
+.heroes-button:hover,
+.heroes-button:focus {
+  background-color: #188ce8;
 }
 /*===========END==HERO========== */
 /*======ABOUT=US=====*/
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.advantage-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+.advantage-item {
+  margin-right: 30px;
+  margin-top: 30px;
+  flex-basis: calc((100% - 120px) / 4);
+}
+.advantag-item:last-child {
+  margin-right: 0px;
+}
 .advantage-01 {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -226,6 +282,10 @@ img {
 }
 /*======END=ABOUT=US=====*/
 /*======WHAT=WE=DO====*/
+.workplace {
+  text-align: center;
+  padding-top: 47px;
+}
 .what-we-do {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -235,10 +295,33 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-color);
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(-1 * var(--card-set-gap));
+}
+.what-we-do-item {
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
+  margin-right: var(--card-set-gap);
+}
+.what-we-do-item::not(:last-of-type) {
+  margin-right: 30px;
+}
+.images {
+  display: block;
 }
 /*======END=WHAT=WE=DO====*/
 /*======TEAM======*/
+.team {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
 
+  background-color: #f5f4fa;
+}
 .team-desc {
   font-family: Roboto;
   font-style: normal;
@@ -247,6 +330,18 @@ img {
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+.regular-title {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+.frame {
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-basis: calc((100% - 120px) / 4);
 }
 .name-igor {
   font-family: Roboto;
@@ -326,6 +421,8 @@ img {
 
 .footer-section {
   background: var(--bg-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .logo-desc {
   font-family: Raleway;
@@ -377,7 +474,9 @@ img {
   text-decoration: none;
 }
 /*=====END==FOOTER=====*/
+
 /*==========PORTFOLIO=HEADER========= */
+
 .portfolio {
   font-family: Raleway;
   font-style: normal;
@@ -403,6 +502,7 @@ img {
   letter-spacing: 0.02em;
   color: var(--main-color);
 }
+
 .portfolio-nav.current {
   color: var(--second-text-color);
 }
