@@ -38,6 +38,9 @@ img {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+.title-hidden {
+  display: none;
+}
 /*========HEDER======== */
 .header-page {
   border-bottom: 1px solid #ececec;
@@ -74,25 +77,30 @@ img {
   display: flex;
   margin-left: auto;
 }
-.logo {
+.logo-box {
   margin-right: 93px;
+}
+.logo {
+  display: block;
+
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
   font-size: 26px;
   line-height: 1.19;
-  /* identical to box height */
   letter-spacing: 0.03em;
   color: var(--second-text-color);
 }
-
 .logo-span-1 {
   color: var(--second-text-color);
 }
 .logo-span-2 {
   color: var(--main-color);
 }
-
+.footer-section .logo-span-2 {
+  color: var(--second-title-color);
+  margin-bottom: 20px;
+}
 .menu-link {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
@@ -113,6 +121,7 @@ img {
 .mail-link {
   margin-left: auto;
   margin-right: 50px;
+
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -142,21 +151,22 @@ img {
 
 /*===========HERO========== */
 .hero-background {
-  background: var(--bg-color);
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  background: var(--bg-color);
 }
 
 .main-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+
   color: var(--second-title-color);
   text-transform: uppercase;
   font-size: 44px;
   font-weight: 900;
   letter-spacing: 0.06em;
   line-height: 1.36;
-  margin-top: 0;
-  margin-bottom: 30px;
 }
 
 .modal-btn {
@@ -181,30 +191,27 @@ img {
   background-color: #188ce8;
 }
 /*===========END==HERO========== */
-/*======ABOUT=US=====*/
 
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
+/*======ABOUT=US=====*/
+.advantages-section {
+  line-height: 1.71;
+  margin-bottom: 0px;
+  padding-bottom: 47px;
 }
+
 .advantage-list {
   display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
 }
 .advantage-item {
   margin-right: 30px;
-  margin-top: 30px;
-  flex-basis: calc((100% - 120px) / 4);
+  flex-basis: calc((100% - 90px) / 4);
 }
 .advantag-item:last-child {
   margin-right: 0px;
 }
 .advantage-01 {
+  margin-bottom: 10px;
+
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -223,70 +230,16 @@ img {
   letter-spacing: 0.03em;
   color: var(--text-about);
 }
-.advantage-02 {
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--title-color);
-}
-.advantage-002 {
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--text-about);
-}
-.advantage-03 {
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--title-color);
-}
-.advantage-003 {
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--text-about);
-}
-.advantage-04 {
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--title-color);
-}
-.advantage-004 {
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--text-about);
-}
-/*======END=ABOUT=US=====*/
-/*======WHAT=WE=DO====*/
+/*======END ABOUT US=====*/
+/*======WHAT WE DO====*/
 .workplace {
   text-align: center;
   padding-top: 47px;
 }
-.what-we-do {
+.title-desc {
+  margin-top: 0;
+  margin-bottom: 50px;
+
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -295,8 +248,6 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-color);
-  margin-top: 0;
-  margin-bottom: 50px;
 }
 .work-list {
   display: flex;
@@ -307,30 +258,20 @@ img {
   flex-basis: calc(100% / 3 - var(--card-set-gap));
   margin-right: var(--card-set-gap);
 }
-.what-we-do-item::not(:last-of-type) {
+.what-we-do-item:not(:last-of-type) {
   margin-right: 30px;
 }
 .images {
   display: block;
 }
-/*======END=WHAT=WE=DO====*/
-/*======TEAM======*/
+/*====== END WHAT WE DO ====*/
+/*====== TEAM ======*/
 .team {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
 
   background-color: #f5f4fa;
-}
-.team-desc {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-bottom: 50px;
 }
 .regular-title {
   display: flex;
@@ -343,62 +284,13 @@ img {
   margin-top: 30px;
   flex-basis: calc((100% - 120px) / 4);
 }
-.name-igor {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.18;
-  letter-spacing: 0.03em;
-  color: var(--title-color);
-}
-.about-igor {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 1.18;
-  letter-spacing: 0.03em;
-  color: var(--text-about);
-}
-.name-olga {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.18;
-  letter-spacing: 0.03em;
-  color: var(--title-color);
-}
-.about-olga {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 1.18;
-  letter-spacing: 0.03em;
-  color: var(--text-about);
-}
-.name-nikolaj {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.18;
-  letter-spacing: 0.03em;
-  color: var(--title-color);
-}
-.about-nikolaj {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 1.18;
-  letter-spacing: 0.03em;
-  color: var(--text-about);
-}
+.person {
+  padding-top: 30px;
+  padding-bottom: 30px;
 
-.name-mihail {
+  color: var(--text-about);
+}
+.name-person {
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -407,7 +299,7 @@ img {
   letter-spacing: 0.03em;
   color: var(--title-color);
 }
-.about-mihail {
+.about-person {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -416,31 +308,17 @@ img {
   letter-spacing: 0.03em;
   color: var(--text-about);
 }
-/*=====END=TEAM======*/
-/*=====FOOTER========*/
+/*===== END TEAM ======*/
+/*======== FOOTER ========*/
 
 .footer-section {
   background: var(--bg-color);
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.logo-desc {
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  color: var(--second-text-color);
-  text-decoration: none;
+.footer-list:not(:last-child) {
+  margin-bottom: 9px;
 }
-.logo-span {
-  color: var(--second-text-color);
-}
-.logo-span-footer {
-  color: var(--second-title-color);
-}
-
 .footer-google {
   font-family: Roboto;
   font-style: normal;
@@ -451,7 +329,7 @@ img {
   color: var(--second-title-color);
   text-decoration: none;
 }
-.footer-mail {
+.footer-link {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -462,22 +340,14 @@ img {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
 }
-.footer-tel {
-  text-decoration: none;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 4.28;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-  text-decoration: none;
-}
-/*=====END==FOOTER=====*/
 
-/*==========PORTFOLIO=HEADER========= */
+/*======= END FOOTER =====*/
+
+/*========== PORTFOLIO=HEADER ========= */
 
 .portfolio {
+  margin-right: 93px;
+
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
@@ -494,7 +364,7 @@ img {
 .portfolio-span-2 {
   color: var(--main-color);
 }
-.portfolio-nav {
+.portfolio-nav .link {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -511,6 +381,9 @@ img {
   color: var(--second-text-color);
 }
 .mail-list {
+  margin-left: auto;
+  margin-right: 50px;
+
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -538,17 +411,41 @@ img {
   color: var(--second-text-color);
 }
 
-/*==========END=PORTFOLIO=HEADER========= */
+/*========== END=PORTFOLIO=HEADER ========= */
 
-/*========HERO======== */
+/*=========== HERO ========= */
 ul {
   list-style: none;
 }
 li {
   list-style: none;
 }
+.container {
+  width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========== FILTER =========== */
+.filters-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.item-filtr:not(:last-child) {
+  margin-right: 8px;
+}
 
 .button-01 {
+  padding: 6px 22px;
+
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  border: 0px;
+
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -567,11 +464,31 @@ li {
   color: var(--second-title-color);
   background: var(--second-text-color);
 }
+.box {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding-left: 0px;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
 .box-img {
+  margin-left: 30px;
+  margin-top: 30px;
+
+  flex-basis: calc((100% - 96px) / 3);
+
   top: 262px;
   background: url(portfolio1.jpg);
 }
+.works-desc {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+}
 .portfolio-h3 {
+  margin-bottom: 4px;
+
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -588,63 +505,4 @@ li {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--text-about);
-}
-.footer-sec {
-  width: 1600px;
-  height: 252px;
-  left: 0px;
-  top: 1628px;
-  background: var(--bg-color);
-}
-.logo-portfolio {
-  width: 145px;
-  height: 31px;
-  left: 215px;
-  top: 1688px;
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 31px;
-
-  letter-spacing: 0.03em;
-  color: var(--second-text-color);
-  text-decoration: none;
-  background: var(--bg-color);
-}
-.logo-span {
-  color: var(--second-text-color);
-}
-.logo-span-footer {
-  color: var(--second-title-color);
-}
-.footer-map {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--second-title-color);
-  text-decoration: none;
-}
-.footer-list-01 {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-  text-decoration: none;
-}
-.footer-list-02 {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-  text-decoration: none;
 }
