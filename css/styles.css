@@ -306,11 +306,9 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-
 .footer-info:not(:last-child) {
   margin-bottom: 9px;
 }
-
 .item {
   margin-bottom: 20px;
 }
