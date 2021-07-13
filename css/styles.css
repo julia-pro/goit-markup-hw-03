@@ -310,6 +310,10 @@ img {
 .footer-info:not(:last-child) {
   margin-bottom: 9px;
 }
+
+.item {
+  margin-bottom: 20px;
+}
 .footer-google {
   font-style: normal;
   font-weight: normal;
